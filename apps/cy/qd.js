@@ -1,6 +1,5 @@
 function calc() {
-  var amountText = document.getElementById('amountField');
-  console.log(amountText);
+  var amountText = document.getElementById("amountField").value;
 
   if (!amountText) {
     alert("请输入正确的数量！")
@@ -15,7 +14,8 @@ function calc() {
   }
 
   const allItems = [
-    {name: "", ratio: 0.1}
+    {name: "牛肉", ratio: 0.5},
+    {name: "羊肉", ratio: 0.2},
   ];
 
   var tbody = document.getElementById('myTBody');
@@ -23,11 +23,11 @@ function calc() {
     var tr = document.createElement('tr');
     // first td
     var itemNameTd = document.createElement('td');
-    itemNameTd.appendChild(document.createTextNode(item["name"]));
+    itemNameTd.appendChild(document.createTextNode(item.name));
     tr.appendChild(itemNameTd);
     // second td
     var amountTd = document.createElement('td');
-    amountTd.appendChild(document.createTextNode(item["ratio"] * amount));
+    amountTd.appendChild(document.createTextNode(item.ratio * amount));
     tr.appendChild(amountTd);
 
     tbody.appendChild(tr);
