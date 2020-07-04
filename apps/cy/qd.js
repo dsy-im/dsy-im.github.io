@@ -1,7 +1,7 @@
 function calc() {
-  var amountText = document.getElementById("amountField").value;
+  var amountText = document.getElementById("amountField").value.trim();
 
-  if (!amountText) {
+  if (!amountText || !/^\d+$/.test(amountText)) {
     alert("请输入正确的数量！")
     return;
   }
