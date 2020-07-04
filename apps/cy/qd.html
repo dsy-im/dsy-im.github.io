@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang=zh-cmn-Hans>
+  <head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <link href="../node_modules/milligram/dist/milligram.min.css" rel="stylesheet">
+    <title>采购清单|by DSY.im</title>
+    <body>
+      <noscript>
+        <strong>当前浏览器不支持 JavaScript 脚本，请更换浏览器再试。</strong>
+      </noscript>
+
+      <div class="container">
+        <div class="row" style="margin: 30 100 5 100">
+          <form>
+            <fieldset>
+              <label for="nameField">人数</label>
+              <input type="text" placeholder="请输入数字" id="amountField">
+              <input class="button-primary" type="submit" id="calc" value="计算">
+            </fieldset>
+          </form>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>品名</th>
+              <th>数量</th>
+            </tr>
+          </thead>
+          <tbody id="myTBody">
+          </tbody>
+        </table>
+
+      </div>
+      <script src="qd.js"></script>
+    </body>
+</html>
