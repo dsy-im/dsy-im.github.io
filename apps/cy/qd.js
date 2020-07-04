@@ -35,5 +35,6 @@ function calc() {
 }
 
 document.getElementById("calc").addEventListener("click", function(){
+  document.querySelectorAll("#myTBody > tr").forEach( tr => tr.remove());
   calc();
 });
